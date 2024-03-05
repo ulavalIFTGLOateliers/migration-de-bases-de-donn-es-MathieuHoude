@@ -25,7 +25,7 @@ class Database:
     def _open_sql_connection(self):
         self.connection = pymysql.connect(
             host=self.host,
-            port=self.port,
+            port=int(self.port),
             user=self.user,
             password=self.password,
             db=self.database,
